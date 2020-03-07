@@ -35,6 +35,7 @@
             this.основноеМенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.черновикToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,12 +105,22 @@
             this.panel1.Size = new System.Drawing.Size(1133, 24);
             this.panel1.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(231, 222);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1132, 645);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.panel1);
@@ -138,6 +149,7 @@
         private System.Windows.Forms.ToolStripMenuItem основноеМенюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem черновикToolStripMenuItem1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

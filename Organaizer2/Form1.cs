@@ -13,6 +13,7 @@ using MetroFramework.Forms;
 using MetroFramework.Components;
 using MetroFramework;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Organaizer2
 {
@@ -30,16 +31,19 @@ namespace Organaizer2
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            string connectionString = @"Data Source = LAPTOP-B3D7R5IQ;Initial Catalog = TestERwin; Integrated Security = True";
-
-
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            label1.Text = connectionString;
+            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
 
+                connection.Open();
+                label1.Text += connection.State;
 
-
-
-
+                string sqlExpression = "INSERT INTO Task (TaskName, Decription) VALUES ('Тест', 'Это работает?')";
+                SqlCommand sqlCommand = new SqlCommand(sqlExpression, connection);
+                int number = sqlCommand.ExecuteNonQuery();
+                label1.Text = Convert.ToString(number);
             }
 
 
