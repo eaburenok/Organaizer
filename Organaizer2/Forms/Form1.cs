@@ -23,8 +23,7 @@ namespace Organaizer2
 
         public Form1()
         {
-            InitializeComponent();
-            
+            InitializeComponent();     
             
         }
 
@@ -45,9 +44,6 @@ namespace Organaizer2
                 int number = sqlCommand.ExecuteNonQuery();
                 label1.Text = Convert.ToString(number);
             }
-
-
-
 
         }
 
